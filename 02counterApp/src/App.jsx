@@ -4,13 +4,27 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  let [counter, setCounter] = useState(5);
+  let [counter, setCounter] = useState(0);
   const addValue = () => {
     if (counter + 1 > 20) {
       alert("You can not go beyond 20!");
       return;
     }
     setCounter(counter + 1);
+    //NOTES--------------------------------->>>>>>>>
+    //This does not work as intended -->
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+
+    //This works--->
+    // setCounter((prev) => prev + 1);
+    // setCounter((prev) => prev + 1);
+    // setCounter((prev) => prev + 1);
+    // setCounter((prev) => prev + 1);
+    // setCounter((prev) => prev + 1);
   };
   const removeValue = () => {
     if (counter - 1 < 0) {
